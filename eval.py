@@ -69,6 +69,8 @@ if __name__ == "__main__":
             generation_config = generation_config,
             num_beams = args.ovm_num_beams,
             top_k_per_step = args.top_k_per_step,
+            max_steps = args.max_steps,
+            max_new_tokens_per_step = args.max_new_tokens_per_step,
             batch_size_per_sequence = args.batch_size_per_sequence,
         )
         
