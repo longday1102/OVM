@@ -71,7 +71,6 @@ class ValueGuideBeamSearch:
         num_beams: int,
         batch_size_per_sequence: int
     ):
-        
         items = self.tokenizer(input_text, return_tensors = "pt")
         input_ids = items.input_ids
         assert input_ids.ndim == 2
