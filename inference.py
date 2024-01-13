@@ -151,7 +151,7 @@ class GetResponse:
         }
         self.ovm_generation_cf = kwargs.get("ovm_generation_cf", ovm_generation_cf)   
         
-    def generate_respone(
+    def generate_response(
         self,
         input_text: str,
         ovm_mode: bool = False
