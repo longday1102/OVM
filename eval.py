@@ -18,9 +18,9 @@ if __name__ == "__main__":
     parser.add_argument("--verifier_weight_path", default=None, type=str)
     parser.add_argument("--generator_path", default="mistralai/Mistral-7B-v0.1", type=str)
     parser.add_argument("--output_dir", default=None, type=str)
-    parser.add_argument("--load_k_bit", default=None, type=bool)
+    parser.add_argument("--load_k_bit", required=True, default=False, action="store_true")
     parser.add_argument("--max_new_tokens", required=True, type=int)
-    parser.add_argument("--do_sample", required=True, type=bool)
+    parser.add_argument("--do_sample", required=True, default=False, action="store_true")
     parser.add_argument("--top_k", default=None, type=int)
     parser.add_argument("--top_p", default=None, type=float)
     parser.add_argument("--temperature", default=None, type=float)
@@ -58,7 +58,6 @@ if __name__ == "__main__":
             backbone = generator,
             checkpoint_dir = args.verifier_weight_path,
         )
-        print(verifier)
         infer = ValueGuideBeamSearch(
             verifier = verifier,
             tokenizer = tokenizer
