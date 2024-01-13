@@ -2,12 +2,12 @@
 export CUDA_VISIBLE_DEVICES=0,1
 
 python eval.py \
---ovm_mode True \
+--ovm_mode \
 --verifier_weight_path "checkpoint/verifier/verifier.pt" \
 --generator_path "longhoang06/OVM-generator" \
 --output_dir "eval_results.json" \
 --max_new_tokens 512 \
---do_sample True \
+--do_sample \
 --top_k 50 \
 --top_p 1.0 \
 --temperature 0.7 \
