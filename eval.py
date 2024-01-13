@@ -32,6 +32,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_new_tokens_per_step", required=False, type=int)
     parser.add_argument("--batch_size_per_sequence", required=False, type=int)
     args = parser.parse_args()
+    print(vars(args))
     
     generator, tokenizer = load_generator_and_tokenizer(
             generator_path = args.generator_path,
