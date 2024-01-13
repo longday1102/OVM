@@ -59,6 +59,7 @@ if __name__ == "__main__":
             backbone = generator,
             checkpoint_dir = args.verifier_weight_path,
         )
+        print(verifier)
         infer = ValueGuideBeamSearch(
             verifier = verifier,
             tokenizer = tokenizer
