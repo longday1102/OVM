@@ -168,12 +168,12 @@ class GetResponse:
         if ovm_mode:
             response = self.ovm_sampling.generate(
                 input_text = input_text,
-                generation_config = self.generation_config,
+                generation_config = generation_config,
                 **self.ovm_generation_cf,
             )
         else:
             response = self.simple_sampling.generate(
                 input_text = input_text,
-                generation_config = self.generation_config,
+                generation_config = generation_config,
             )
         return response
