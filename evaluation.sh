@@ -1,7 +1,7 @@
 #!/bin/bash
 export CUDA_VISIBLE_DEVICES=0,1
 
-python eval.py \
+python evaluation.py \
 --ovm_mode \
 --verifier_weight_path "checkpoint/verifier/verifier.pt" \
 --generator_path "longhoang06/OVM-generator" \
