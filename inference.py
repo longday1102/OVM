@@ -51,7 +51,10 @@ class OVMSampling(ValueGuideBeamSearch):
         batch_size_per_sequence: int = 2,
         **kwargs
     ):
+        n_sampling_per_step = int(num_beams / top_k_per_step)
+        max_new_tokens = generation_config.max_new_tokens
         self.verifier.eval()
+        
         input_prompt = self.prompter.generate_prompt(instruction = input_text)
         batches = self._prepare_for_generate(
             input_text = input_prompt,
