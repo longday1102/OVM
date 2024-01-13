@@ -93,7 +93,7 @@ class ValueGuideBeamSearch:
     def generate(
         self,
         dataset,
-        output_dir: str
+        output_dir: str,
         generation_config: GenerationConfig,
         num_beams: int = 20,
         top_k_per_step: int = 1,
