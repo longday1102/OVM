@@ -6,7 +6,6 @@ python eval.py \
 --verifier_weight_path "checkpoint/verifier/verifier.pt" \
 --generator_path "longhoang06/OVM-generator" \
 --output_dir "eval_results.json" \
---load_k_bit False \
 --max_new_tokens 512 \
 --do_sample True \
 --top_k 50 \
