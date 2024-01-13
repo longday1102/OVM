@@ -1,5 +1,5 @@
-from infer.vanilla_generator import VanillaSampling
-from infer.generator_by_step import ValueGuideBeamSearch
+from eval_sampling.vanilla_generator import VanillaSampling
+from eval_sampling.generator_by_step import ValueGuideBeamSearch
 from build_verifier import VerifierModel, load_generator_and_tokenizer
 from transformers import GenerationConfig
 import torch
