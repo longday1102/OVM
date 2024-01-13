@@ -124,7 +124,7 @@ class GetResponse:
         self,
         generator: PreTrainedModel,
         tokenizer: PreTrainedTokenizer,
-        verifier_weigth_path: str = None,
+        verifier_weight_path: str = None,
         **kwargs,
     ):
         generator.eval()
