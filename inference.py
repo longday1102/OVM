@@ -9,7 +9,7 @@ class SimpleSampling(VanillaSampling):
         generator: PreTrainedModel,
         tokenizer: PreTrainedTokenizer,
     ):
-        super(SimpleSampling, self).__init__()
+        super(SimpleSampling, self).__init__(generator, tokenizer)
     
     def generate(
         self,
