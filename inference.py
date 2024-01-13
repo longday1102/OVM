@@ -1,5 +1,6 @@
 from eval_sampling.generator_by_step import ValueGuideBeamSearch
 from eval_sampling.vanilla_generator import VanillaSampling
+from build_verifier import VerifierModel
 from transformers import PreTrainedModel, GenerationConfig, PreTrainedTokenizer
 import torch
 
