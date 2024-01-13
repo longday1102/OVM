@@ -152,7 +152,8 @@ class GetResponse:
             "max_new_tokens_per_step": 100,
             "batch_size_per_sequence": 16,
         }
-        self.ovm_generation_cf = kwargs.get("ovm_generation_cf", ovm_generation_cf)   
+        self.ovm_generation_cf = kwargs.get("ovm_generation_cf", ovm_generation_cf)  
+        self.tokenizer = tokenizer
         
     def generate_response(
         self,
@@ -167,6 +168,7 @@ class GetResponse:
                 temperature = 0.7,
                 length_penalty = 1.0,
                 repetition_penalty = 1.0,
+                eos_token_id = self.tokenizer.eos_token_id,
         )
         if ovm_mode:
             response = self.ovm_sampling.generate(
