@@ -14,7 +14,7 @@ set_seed(42)
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument("--ovm_mode", required=True, type=str)
+    parser.add_argument("--ovm_mode", required=True, default=False, action="store_true")
     parser.add_argument("--verifier_weight_path", default=None, type=str)
     parser.add_argument("--generator_path", default="mistralai/Mistral-7B-v0.1", type=str)
     parser.add_argument("--output_dir", default=None, type=str)
