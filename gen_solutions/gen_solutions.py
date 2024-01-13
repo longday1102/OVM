@@ -78,6 +78,3 @@ def generator_and_save(dataset):
 
 if __name__ == "__main__":
     generator_and_save(gen_dataset)
-                
-        
-
