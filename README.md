@@ -2,7 +2,7 @@
 ## I. Introduction
 - This project is the main idea of the [Outcome-supervised Verifiers for Planning in Mathematical Reasoning](https://arxiv.org/pdf/2311.09724v1.pdf) paper that I implemented from scratch.
 - Large language models (LLMs) often struggle with maintaining accuracy across a sequence of intermediate reasoning steps in mathematical reasoning, leading to error propagation that undermines the final result.  The current methodology to mitigate this issue primarily involves using a verifier model to assess the correctness of generated solution candidates, focusing either on **the overall reasoning path** or on **an incomplete reasoning path** (quote the authors).
-- In this repository I focus on an **an incomplete reasoning path**, which the authors report achieves higher performance than **the overall reasoning path** for performing the ***answering Vietnamese Elementary Math questions*** task.
+- In this repository I focus on an **an incomplete reasoning path**, which the authors report achieves higher performance than **the overall reasoning path** for performing the ***answering Vietnamese Elementary Math questions*** task (motivation: [Zalo AI Challenge 2023](https://challenge.zalo.ai/#intro) exam, track ELEMENTARY MATHS SOLVING).
 ## II. Method 
 <p align="center">
   <img src="https://github.com/longday1102/OVM/assets/121651344/1c981a44-6918-46de-b00f-3dc7adcc4a28">
@@ -26,5 +26,5 @@ The base model I use is [Mistral 7B](https://huggingface.co/mistralai/Mistral-7B
 ## V. Test
 Run all cells in [inference.ipynb](https://github.com/longday1102/OVM/blob/main/inference.ipynb)
 
-*This is a paper with a very good idea, my repository implements the main idea of the paper in a simpler way (mainly focuses on ideas), you can see the authors' original repo [here](https://github.com/FreedomIntelligence/OVM).*
+*This is a paper with a very good idea, my repository implements the main idea of the paper in a simpler way (mainly focuses on ideas), you can see the authors' original repo [here](https://github.com/FreedomIntelligence/OVM).*                                                                                                           
 *Hopefully this method will open up many new directions of thinking and new ideas in reasoning problems. Thank you a lot for the finding! 😊*
