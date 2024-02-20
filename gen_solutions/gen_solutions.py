@@ -25,7 +25,7 @@ model = AutoModelForCausalLM.from_pretrained(model_path, device_map = "auto", to
 model = PeftModel.from_pretrained(model, peft_path)
 model = model.merge_and_unload()
 
-def generator_and_save(dataset):
+def generation_and_save(dataset):
     def get_answer(text):
         return text.split("Đáp án:")[-1].strip()
     
@@ -77,4 +77,4 @@ def generator_and_save(dataset):
     new_dataset.save_to_disk("solutions_genereted")
 
 if __name__ == "__main__":
-    generator_and_save(gen_dataset)
+    generation_and_save(gen_dataset)
